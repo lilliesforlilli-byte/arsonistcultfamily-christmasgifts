@@ -30,6 +30,32 @@
     .letter p {
       font-size: 17px;
     }
+
+    /* STICKY BACK TO HOME BUTTON */
+    .back-home {
+      position: fixed;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 12px 26px;
+      font-size: 18px;
+      font-family: Georgia, serif;
+      color: #3a2f2f;
+      text-decoration: none;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+      transition: all 0.3s ease;
+      z-index: 10000;
+    }
+
+    .back-home:hover {
+      background: rgba(255, 255, 255, 0.55);
+      transform: translateX(-50%) translateY(-4px);
+    }
+
+    /* SNOW */
     .snow {
       position: fixed;
       top: 0;
@@ -131,6 +157,21 @@ Thank you of making this a brighter year
     your Partner in Crime.
   </p>
 </div>
+
+<!-- STICKY BACK TO HOME -->
+<a href="index.html" class="back-home" onclick="playClick()">🏠 Back to Home</a>
+
+<!-- CLICK SOUND -->
+<audio id="clickSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7f4f1b5dbb.mp3?filename=click-124467.mp3"></audio>
+
+<script>
+  function playClick() {
+    const sound = document.getElementById("clickSound");
+    sound.currentTime = 0;
+    sound.volume = 0.2;
+    sound.play();
+  }
+</script>
 
 <div class="snow"></div>
 
