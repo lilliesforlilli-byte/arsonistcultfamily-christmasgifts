@@ -7,27 +7,50 @@
       background: linear-gradient(#1b4332, #081c15);
       color: #fefae0;
       font-family: Georgia, serif;
-      text-align:  center;
+      text-align: center;
       padding: 60px;
+      min-height: 100vh;
     }
+
     h1 {
       font-size: 40px;
       margin-bottom: 10px;
     }
+
     p {
       font-size: 18px;
       opacity: 0.9;
+      margin-bottom: 40px;
     }
-    a {
+
+    /* BUTTON GRID */
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .buttons a {
       display: block;
-      margin: 12px;
-      font-size: 22px;
-      color: #ffd166;
+      padding: 14px 20px;
+      font-size: 20px;
       text-decoration: none;
+      color: #fefae0;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
-    a: hover {
-      text-decoration:  underline;
+
+    .buttons a:hover {
+      background: rgba(255, 255, 255, 0.28);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
     }
+
+    /* SNOW */
     .snow {
       position: fixed;
       top: 0;
@@ -44,6 +67,7 @@
       background-size: 200px 200px;
       animation: snow 10s linear infinite;
       opacity: 0.6;
+      z-index: 9999;
     }
 
     @keyframes snow {
@@ -52,24 +76,28 @@
     }
   </style>
 </head>
+
 <body>
 
-<h1>🎄 Arsonist Cult Family Christmas Gift 🎄</h1>
-<p>For the people who made my year warmer 💫</p>
+  <h1>🎄 Arsonist Cult Family Christmas Gift 🎄</h1>
+  <p>For the people who made my year warmer 💫</p>
 
-<a href="zhou.html">Zhou</a>
-<a href="chichi.html">Chichi</a>
-<a href="cryp.html">Cryp</a>
-<a href="soup.html">Soup</a>
-<a href="vanessa.html">Vanessa</a>
-<a href="reirei.html">Reirei</a>
-<a href="tiffany.html">Tiffany</a>
-<a href="evvy.html">Evvy</a>
-<a href="navi.html">Navi</a>
-<a href="litara.html">Litara</a>
-<a href="kaizen.html">Kaizen</a>
-<a href="issa.html">Issa</a>
+  <div class="buttons">
+    <a href="zhou.html">Zhou</a>
+    <a href="chichi.html">Chichi</a>
+    <a href="cryp.html">Cryp</a>
+    <a href="soup.html">Soup</a>
+    <a href="vanessa.html">Vanessa</a>
+    <a href="reirei.html">Reirei</a>
+    <a href="tiffany.html">Tiffany</a>
+    <a href="evvy.html">Evvy</a>
+    <a href="navi.html">Navi</a>
+    <a href="litara.html">Litara</a>
+    <a href="kaizen.html">Kaizen</a>
+    <a href="issa.html">Issa</a>
+  </div>
 
   <div class="snow"></div>
+
 </body>
 </html>
