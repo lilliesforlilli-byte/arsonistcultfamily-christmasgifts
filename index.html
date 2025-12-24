@@ -2,15 +2,22 @@
 <html>
 <head>
   <title>Christmas Gift 🎄</title>
+
+  <!-- MOBILE VIEWPORT (IMPORTANT) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
+    html, body {
+      overflow-x: hidden;
+    }
+
     body {
       background: linear-gradient(#1b4332, #081c15);
       color: #fefae0;
       font-family: Georgia, serif;
       text-align: center;
-      padding: 60px;
+      padding: 60px 20px;
       min-height: 100vh;
-      overflow-x: hidden;
     }
 
     h1 {
@@ -46,7 +53,7 @@
       overflow: hidden;
     }
 
-    /* ICONS ON HOVER */
+    /* ICON ON HOVER */
     .buttons a::after {
       content: "❄️";
       position: absolute;
@@ -78,7 +85,7 @@
     .kaizen { background: #051650; }
     .issa { background: #ff8fa3; color: #3a2f2f; }
 
-    /* STICKY BUTTON */
+    /* STICKY BACK TO TOP */
     .back-home {
       position: fixed;
       bottom: 25px;
@@ -102,12 +109,32 @@
       transform: translateX(-50%) translateY(-4px);
     }
 
-    /* MOBILE */
+    /* MOBILE OPTIMIZATION */
     @media (max-width: 600px) {
-      h1 { font-size: 32px; }
+      body {
+        padding: 40px 16px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .buttons {
+        grid-template-columns: 1fr;
+      }
+
       .buttons a {
         font-size: 22px;
         padding: 18px;
+      }
+
+      .back-home {
+        font-size: 16px;
+        padding: 10px 20px;
       }
     }
 
