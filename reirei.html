@@ -2,22 +2,34 @@
 <html>
 <head>
   <title>Reirei 🎄</title>
+
+  <!-- MOBILE VIEWPORT -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
+    html, body {
+      overflow-x: hidden;
+    }
+
     body {
       background-color: #F7C7D6;
       color: #3a2f2f;
       font-family: Georgia, serif;
-      padding: 70px;
+      padding: 60px 20px;
       text-align: center;
     }
+
     h1 {
       margin-bottom: 30px;
+      font-size: 36px;
     }
+
     p {
       font-size: 18px;
       line-height: 1.8;
       margin-bottom: 20px;
     }
+
     .letter {
       margin-top: 60px;
       padding-top: 40px;
@@ -27,6 +39,7 @@
       margin-right: auto;
       text-align: left;
     }
+
     .letter p {
       font-size: 17px;
     }
@@ -53,6 +66,36 @@
     .back-home:hover {
       background: rgba(255, 255, 255, 0.55);
       transform: translateX(-50%) translateY(-4px);
+    }
+
+    /* MOBILE OPTIMIZATION */
+    @media (max-width: 600px) {
+      body {
+        padding: 40px 16px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      .letter {
+        margin-top: 40px;
+        padding-top: 30px;
+      }
+
+      .letter p {
+        font-size: 15px;
+      }
+
+      .back-home {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
     }
 
     /* SNOW */
@@ -108,7 +151,7 @@ You somehow always make me whole.
 
 <p>
 My partner in crime, a constant cheer,<br>
-Thank you of making this a brighter year
+Thank you for making this a brighter year.
 </p>
 
 <p>🤍</p>
@@ -125,7 +168,7 @@ Thank you of making this a brighter year
   <p>
     You bring so much joy just by being you.
     Your humor makes even the dullest days brighter,
-    and you makes everything feel lighter.
+    and you make everything feel lighter.
     You know how to turn moments into memories
     without even trying.
   </p>
