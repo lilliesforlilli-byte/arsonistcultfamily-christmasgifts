@@ -1,11 +1,13 @@
-<html><head>
+<!DOCTYPE html>
+<html>
+<head>
   <title>Mama 🎄</title>
   <style>
     body {
       background-color: #000000;
       color: #FFD700;
-      font-family:  Georgia, serif;
-      padding:  70px;
+      font-family: Georgia, serif;
+      padding: 70px;
       text-align: center;
     }
     h1 {
@@ -19,7 +21,7 @@
     .letter {
       margin-top: 60px;
       padding-top: 40px;
-      border-top: 1px solid rgba(253, 252, 220, 0.4);
+      border-top: 1px solid rgba(255, 215, 0, 0.4);
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
@@ -28,10 +30,36 @@
     .letter p {
       font-size: 17px;
     }
+
+    /* STICKY BACK TO HOME BUTTON */
+    .back-home {
+      position: fixed;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 12px 26px;
+      font-size: 18px;
+      font-family: Georgia, serif;
+      color: #FFD700;
+      text-decoration: none;
+      border-radius: 999px;
+      background: rgba(255, 215, 0, 0.15);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      transition: all 0.3s ease;
+      z-index: 10000;
+    }
+
+    .back-home:hover {
+      background: rgba(255, 215, 0, 0.3);
+      transform: translateX(-50%) translateY(-4px);
+    }
+
+    /* SNOW */
     .snow {
       position: fixed;
       top: 0;
-      left:  0;
+      left: 0;
       width: 100%;
       height: 100%;
       pointer-events: none;
@@ -42,7 +70,7 @@
         radial-gradient(1.5px 1.5px at 130px 80px, white, transparent),
         radial-gradient(2px 2px at 160px 20px, white, transparent);
       background-size: 200px 200px;
-      animation:  snow 10s linear infinite;
+      animation: snow 10s linear infinite;
       opacity: 0.6;
     }
 
@@ -52,7 +80,9 @@
     }
   </style>
 </head>
+
 <body>
+
 <h1>For Mi Mama 🎄</h1>
 
 <p>
@@ -124,12 +154,28 @@ It will always be because of you.
     I love you so so so much.
   </p>
 
-
-  <div class="snow"></div>
-
   <p>
     Love,<br>
     your Chotu.
   </p>
 </div>
-</body></html>
+
+<!-- STICKY BACK TO HOME -->
+<a href="index.html" class="back-home" onclick="playClick()">🏠 Back to Home</a>
+
+<!-- CLICK SOUND -->
+<audio id="clickSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7f4f1b5dbb.mp3?filename=click-124467.mp3"></audio>
+
+<script>
+  function playClick() {
+    const sound = document.getElementById("clickSound");
+    sound.currentTime = 0;
+    sound.volume = 0.2;
+    sound.play();
+  }
+</script>
+
+<div class="snow"></div>
+
+</body>
+</html>
